@@ -1,0 +1,96 @@
+\documentclass[a4paper]{article}
+\usepackage{tcolorbox}
+\usepackage{amsmath}
+\tcbuselibrary{skins}
+
+\title{
+\vspace{-3em}
+\begin{tcolorbox}
+\Huge\sffamily \begin{center} Chapter 30  \mbox{} \\ \huge From the "Age of Limits" to the Age of Reagan \mbox{} \\
+\LARGE Finn Frankis \mbox{} \\
+\Large AP US History - July 25{$^\text{th}$}, 2018 \end{center}
+\end{tcolorbox}
+\vspace{-3em}
+}
+\date{}
+\author{}
+
+\usepackage{background}
+\SetBgScale{1}
+\SetBgAngle{0}
+\SetBgColor{red}
+\SetBgContents{\rule[0em]{4pt}{\textheight}}
+\SetBgHshift{-2.3cm}
+\SetBgVshift{0cm}
+\usepackage[margin=2cm]{geometry}
+
+\makeatletter
+\def\cornell{\@ifnextchar[{\@with}{\@without}}
+\def\@with[#1]#2#3{
+\begin{tcolorbox}[enhanced,colback=gray,colframe=black,fonttitle=\large\bfseries\sffamily,sidebyside=true, nobeforeafter,before=\vfil,after=\vfil,colupper=blue,sidebyside align=top, lefthand width=.3\textwidth,
+opacityframe=0,opacityback=.3,opacitybacktitle=1, opacitytext=1,
+segmentation style={black!55,solid,opacity=0,line width=3pt},
+title=#1
+]
+\begin{tcolorbox}[colback=red!05,colframe=red!25,sidebyside align=top,
+width=\textwidth,nobeforeafter]#2\end{tcolorbox}%
+\tcblower
+\sffamily
+\begin{tcolorbox}[colback=blue!05,colframe=blue!10,width=\textwidth,nobeforeafter]
+#3
+\end{tcolorbox}
+\end{tcolorbox}
+}
+\def\@without#1#2{
+\begin{tcolorbox}[enhanced,colback=white!15,colframe=white,fonttitle=\bfseries,sidebyside=true, nobeforeafter,before=\vfil,after=\vfil,colupper=blue,sidebyside align=top, lefthand width=.3\textwidth,
+opacityframe=0,opacityback=0,opacitybacktitle=0, opacitytext=1,
+segmentation style={black!55,solid,opacity=0,line width=3pt}
+]
+
+\begin{tcolorbox}[colback=red!05,colframe=red!25,sidebyside align=top,
+width=\textwidth,nobeforeafter]#1\end{tcolorbox}%
+\tcblower
+\sffamily
+\begin{tcolorbox}[colback=blue!05,colframe=blue!10,width=\textwidth,nobeforeafter]
+#2
+\end{tcolorbox}
+\end{tcolorbox}
+}
+\makeatother
+
+\parindent=0pt
+
+\begin{document}
+\maketitle
+\SetBgContents{\rule[0em]{4pt}{\textheight}}
+
+\cornell[Politics and Diplomacy after Watergate]{How did American presidents following Nixon attempt to recover from the disaster of Watergate?}{}
+\cornell{How did Gerald Ford attempt to recover the nation's prosperity in the aftermath of Watergate?}{
+    \begin{itemize}
+        \item Major setback emerged immediately due to poor decision to completely pardon Nixon
+        \begin{itemize}
+            \item Led many to suspect collusion between Nixon and Ford
+            \item Immediate decline in popularity
+        \end{itemize}
+        \item Economic policies relatively unsuccessful
+        \begin{itemize}
+            \item Attempted to curb inflation by calling for voluntary efforts of people, rejecting idea of price/wage controls
+            \item Struggled with recession intensified by energy crisis
+            \begin{itemize}
+                \item \textbf{Arab oil embargo} of 1973 led to extreme increase in price of oil
+            \end{itemize}
+        \end{itemize}
+        \item Political policies often simply continuations of Nixon administration
+        \begin{itemize}
+            \item Signed \textbf{SALT II}, arms control accord desired by Nixon
+            \item Secretary of state \textbf{Henry Kissinger} required Israel to return parts of Sinai to Egypt
+        \end{itemize}
+    \end{itemize}
+}
+\cornell{Another research question}{}
+\cornell{Another research question very long for one line.}{}
+\cornell{Do you want fill much more than a page}{No problem.}
+\cornell{More?}{No problem.}
+
+\cornell[Last question]{This is the end?}{Yes.}
+\end{document}
