@@ -1,2 +1,6 @@
 # AP US History - 2018-19
-Contains reading notes, class notes, and study guides for AP US History.
+## Summary
+Contains reading notes, class notes, and study guides for each chapter of AP US History. 
+
+## Attribution
+Uses Brinkley's *American History* as the primary source of material.
