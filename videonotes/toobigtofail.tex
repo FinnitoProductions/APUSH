@@ -1,0 +1,136 @@
+\documentclass{article}
+
+    \usepackage[T1]{fontenc}
+    \usepackage{inconsolata}
+    \usepackage{amsmath}
+    
+    \usepackage{color}
+    \usepackage{comment}
+    \usepackage{graphicx}
+    \usepackage{tikz}
+    \usepackage{import}
+    \usepackage{enumitem}% http://ctan.org/pkg/enumitem
+    \usepackage{amssymb}
+    \newlist{todolist}{itemize}{2}
+    \setlist[todolist]{label=$\square$}
+    
+    \usepackage{multicol}
+    
+    \usepackage{hyperref}
+    \hypersetup{
+        linktoc=all
+    }
+    
+    \graphicspath{ {./images/} }
+    
+    \definecolor{pblue}{rgb}{0.13,0.13,1}
+    \definecolor{pgreen}{rgb}{0,0.5,0}
+    \definecolor{pred}{rgb}{0.9,0,0}
+    \definecolor{pgrey}{rgb}{0.46,0.45,0.48}
+    
+    \usepackage[draft]{todonotes}
+    \usepackage[margin=0.5in]{geometry}
+    
+    \usepackage{etoolbox,refcount}
+    \usepackage{multicol}
+    \usepackage{pgfplots}
+    \newcounter{countitems}
+    \newcounter{nextitemizecount}
+    \newcommand{\setupcountitems}{%
+      \stepcounter{nextitemizecount}%
+      \setcounter{countitems}{0}%
+      \preto\item{\stepcounter{countitems}}%
+    }
+    \makeatletter
+    \newcommand{\computecountitems}{%
+      \edef\@currentlabel{\number\c@countitems}%
+      \label{countitems@\number\numexpr\value{nextitemizecount}-1\relax}%
+    }
+    \newcommand{\nextitemizecount}{%
+      \getrefnumber{countitems@\number\c@nextitemizecount}%
+    }
+    \newcommand{\previtemizecount}{%
+      \getrefnumber{countitems@\number\numexpr\value{nextitemizecount}-1\relax}%
+    }
+    \makeatother
+    \newenvironment{AutoMultiColItemize}{%
+    \ifnumcomp{\nextitemizecount}{>}{3}{\begin{multicols}{2}}{}%
+    \setupcountitems\begin{itemize}}%
+    {\end{itemize}%
+    \unskip\computecountitems\ifnumcomp{\previtemizecount}{>}{3}{\end{multicols}}{}}
+    \usepackage{listings}
+    \lstset{language=Java,
+      showspaces=false,
+      showtabs=false,
+      breaklines=true,
+      showstringspaces=false,
+      breakatwhitespace=true,
+      commentstyle=\color{pgreen},
+      keywordstyle=\color{pblue},
+      stringstyle=\color{pred},
+      basicstyle=\ttfamily,
+      moredelim=[il][\textcolor{pgrey}]{$ $},
+      moredelim=[is][\textcolor{pgrey}]{\%\%}{\%\%}
+    }
+    
+    
+    \title{\textbf{Too Big to Fail (2011) - Reading Notes}}
+    \date{\textbf{August 27$^\text{th}$, 2018}}
+    \begin{document}
+    \maketitle
+    \textbf{Content Notes: }
+    \begin{itemize}
+        \item Begins with news reports describing sale of Bear Stearns to JPMorgan Chase
+        \item Next major bank with potential to collapse: Lehman Brothers
+        \begin{itemize}
+            \item Henry Paulson, treasury secretary, continually struggles with how to keep banks afloat
+            \begin{itemize}
+                \item Otherwise, has no choice but to buy the banks out to prevent economic collapse (like definition of "Too big to fail")
+                \item After assistance with buyout of Bear Stearns, many banks (including Fuld) became increasingly reliant on support from government
+            \end{itemize}
+            \item Offer from Buffett to purchase represents significantly lower (yet realistic) amount from months previous, leading CEO Dick Fuld to reject
+            \item New President/COO negotiates deal with Korean investors, warning Fuld to stay behind
+            \begin{itemize}
+                \item Fuld arrives unexpectedly, warning investors that their deal is undervalued
+                \item Immediately leave due to poor attitude of Fuld, ending deal
+            \end{itemize}
+        \end{itemize}
+        \item Paulson makes clear announcement that the government will subsidize no more acquisitions of other banks, turning to other banks for Lehman acquisition
+        \begin{itemize}
+            \item Calls CEOs of major banks together, requesting that all assist in BoA purchase of Lehman 
+            \begin{itemize}
+                \item BoA had agreed to only assist in purchase with federal support 
+            \end{itemize}
+            \item Merill Lynch, firm in a position nearly as dangerous as Lehman, privately requests acquisition from BoA 
+            \begin{itemize}
+                \item Agreed to, ending possibility for Lehman deal
+            \end{itemize}
+            \item Lehman only acquirable by Barclays (who had been a potential buyer from the start)
+            \begin{itemize}
+                \item British banking regulator prevents involvement of Barclays
+                \item Leads to complete bankruptcy of Lehman
+            \end{itemize}
+        \end{itemize}
+        \item Collapse of Lehman has other dramatic effects on the stock market, leading to the decline of international insurance firm AIG
+        \begin{itemize}
+            \item GE unable to do business with freefalling stock market
+            \item AIG's decline is responded to with \$85 billion loan 
+        \end{itemize}
+        \item Paulson's solution to continual drying up is purchase of toxic assets
+        \begin{itemize}
+            \item Receives support from Congress on second try
+            \begin{itemize}
+                \item Earned with emphasis on possibility of second Great Depression
+            \end{itemize}
+            \item Not supported heavily by president
+        \end{itemize}
+        \item Time to purchase toxic assets revealed to be too great, leading to final option: capital injections 
+        \begin{itemize}
+            \item Banks given large amounts of money
+            \item Paulson's staff's suggests that banks' use of money be regulated
+            \begin{itemize}
+                \item Inability of banks to agree forces Paulson to give money without any strings attached
+            \end{itemize}
+        \end{itemize}
+    \end{itemize}
+    \end{document} 
