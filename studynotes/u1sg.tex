@@ -1,0 +1,110 @@
+\documentclass{article}
+
+    \usepackage[T1]{fontenc}
+    \usepackage{inconsolata}
+    \usepackage{amsmath}
+    
+    \usepackage{color}
+    \usepackage{comment}
+    \usepackage{graphicx}
+    \usepackage{tikz}
+    \usepackage{chemfig}
+    \usepackage{import}
+    \usepackage{enumitem}% http://ctan.org/pkg/enumitem
+    
+    \usepackage{hyperref}
+    \hypersetup{
+        linktoc=all
+    }
+    
+    \graphicspath{ {./images/} }
+    
+    \definecolor{pblue}{rgb}{0.13,0.13,1}
+    \definecolor{pgreen}{rgb}{0,0.5,0}
+    \definecolor{pred}{rgb}{0.9,0,0}
+    \definecolor{pgrey}{rgb}{0.46,0.45,0.48}
+    
+    \usepackage[draft]{todonotes}
+    \usepackage[margin=0.5in]{geometry}
+    
+    \usepackage{etoolbox,refcount}
+    \usepackage{multicol}
+    \usepackage{pgfplots} 
+    \newcounter{countitems}
+    \newcounter{nextitemizecount}
+    \newcommand{\setupcountitems}{%
+      \stepcounter{nextitemizecount}%
+      \setcounter{countitems}{0}%
+      \preto\item{\stepcounter{countitems}}%
+    }
+    \makeatletter
+    \newcommand{\computecountitems}{%
+      \edef\@currentlabel{\number\c@countitems}%
+      \label{countitems@\number\numexpr\value{nextitemizecount}-1\relax}%
+    }
+    \newcommand{\nextitemizecount}{%
+      \getrefnumber{countitems@\number\c@nextitemizecount}%
+    }
+    \newcommand{\previtemizecount}{%
+      \getrefnumber{countitems@\number\numexpr\value{nextitemizecount}-1\relax}%
+    }
+    \makeatother    
+    \newenvironment{AutoMultiColItemize}{%
+    \ifnumcomp{\nextitemizecount}{>}{3}{\begin{multicols}{2}}{}%
+    \setupcountitems\begin{itemize}}%
+    {\end{itemize}%
+    \unskip\computecountitems\ifnumcomp{\previtemizecount}{>}{3}{\end{multicols}}{}}
+    
+      
+      
+    
+    \title{%
+      \LARGE \textbf{APUSH} \\ \Large \textbf{Periods 1-3: Study Guide}}
+    \author{\textbf{Finn Frankis}}
+    \date{\textbf{September 15th, 2018}}
+    
+    \begin{document}
+    \maketitle
+    \setcounter{tocdepth}{2}
+    \tableofcontents
+    \section{Period 1: 1492-1607}
+    \subsection{Early America}
+    \textbf{Key Concept 1.1: As native populations migrated and settled across North America over time, they developed distinct, complex societies through adaptation to/transformation of their diverse environments.}
+    \subsubsection{Native American Comparison Chart}
+    \subsection{Effects of Cross-Cultural Diffusion}
+        
+    \textbf{Key Concept 1.2: Contact among Europeans, Native Americans, and Africans led to the Columbian Exchange and significant social, cultural, and political changes on both hemispheres.}
+    \subsubsection{European Motives for Exploration}
+    \begin{itemize}
+        \item Growing mercantilist movement driven by \textit{commercial} and \textit{national} ideals as a result of more successful nation states (military competition)
+        \item Desire to spread Christianity and fulfill divine mission
+        \begin{itemize}
+            \item Christopher Columbus: deeply religious, believed that God had laid out prophecy for him to fulfill
+        \end{itemize}
+        \item Major new technologies and business revolutions
+        \begin{itemize}
+            \item Astrolabe
+            \item Joint-stock companies often government-sponsored, based on stock shared among shareholders
+        \end{itemize}
+    \end{itemize}
+    \subsection{Demographic Changes in the Spanish Empire}
+    \begin{itemize}
+        \item Widespread epidemics of diseases like smallpox, typhus rapidly pared down native population
+        \item New crops and livestock introduced, including cattle, pigs, sheep, horse and sugar and bananas
+        \item Europeans received critical new goods and techniques
+        \begin{itemize}
+            \item Learned how to better transform American soil
+            \item Received new crops (\textbf{maize})
+        \end{itemize}
+        \item \textit{Encomienda} system subjugated natives to Spanish dominance
+        \begin{itemize}
+            \item License-based system for natives to work for settlers in exchange for conversion to Christianity
+        \end{itemize}
+    \end{itemize}
+    \subsection{Early European-Native Conflicts}
+
+    \section{Period 2: 1607-1754}
+
+    \section{Period 3: 1754-1800}
+    
+    \end{document} 
