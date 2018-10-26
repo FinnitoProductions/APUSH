@@ -1,0 +1,92 @@
+\documentclass{article}
+
+    \usepackage[T1]{fontenc}
+    \usepackage{inconsolata}
+    \usepackage{amsmath}
+    
+    \usepackage{color}
+    \usepackage{comment}
+    \usepackage{graphicx}
+    \usepackage{tikz}
+    \usepackage{chemfig}
+    \usepackage{import}
+    \usepackage{enumitem}% http://ctan.org/pkg/enumitem
+    
+    \usepackage{hyperref}
+    \hypersetup{
+        linktoc=all
+    }
+    
+    \usepackage{xcolor} 
+
+    \graphicspath{ {./images/} }
+    
+    \definecolor{pblue}{rgb}{0.13,0.13,1}
+    \definecolor{pgreen}{rgb}{0,0.5,0}
+    \definecolor{pred}{rgb}{0.9,0,0}
+    \definecolor{pgrey}{rgb}{0.46,0.45,0.48}
+    
+    \usepackage[draft]{todonotes}
+    \usepackage[margin=0.5in]{geometry}
+    
+    \usepackage{etoolbox,refcount}
+    \usepackage{multicol}
+    \usepackage{pgfplots} 
+    \newcounter{countitems}
+    \newcounter{nextitemizecount}
+    \newcommand{\setupcountitems}{%
+      \stepcounter{nextitemizecount}%
+      \setcounter{countitems}{0}%
+      \preto\item{\stepcounter{countitems}}%
+    }
+    \makeatletter
+    \newcommand{\computecountitems}{%
+      \edef\@currentlabel{\number\c@countitems}%
+      \label{countitems@\number\numexpr\value{nextitemizecount}-1\relax}%
+    }
+    \newcommand{\nextitemizecount}{%
+      \getrefnumber{countitems@\number\c@nextitemizecount}%
+    }
+    \newcommand{\previtemizecount}{%
+      \getrefnumber{countitems@\number\numexpr\value{nextitemizecount}-1\relax}%
+    }
+    \makeatother    
+    \newenvironment{AutoMultiColItemize}{%
+    \ifnumcomp{\nextitemizecount}{>}{3}{\begin{multicols}{2}}{}%
+    \setupcountitems\begin{itemize}}%
+    {\end{itemize}%
+    \unskip\computecountitems\ifnumcomp{\previtemizecount}{>}{3}{\end{multicols}}{}}
+    
+      
+      
+    
+    \title{%
+      \LARGE \textbf{APUSH} \\ \Large \textbf{Periods 1-3: Study Guide}}
+    \author{\textbf{Finn Frankis}}
+    \date{\textbf{September 15th, 2018}}
+    
+    \begin{document}
+    \maketitle
+    \setcounter{tocdepth}{2}
+    \tableofcontents
+    \section{Constitutional Era (1787 - 1789)}
+    \section{Federalist Era (1789 - 1800)}
+    \section {Jeffersonian Era (1800 - 1816)}
+    \subsection{\color{red}{Cultural}}
+    \subsection{\color{blue}{Political}}
+    Jefferson began his presidency carefully ensuring that his Federalist opponents remained satisfied, hoping to gradually diminish their influence by abosrbing them into the Democratic-Republicans. He maintained the national bank, Hamilton's debt repayment plan, and preserved foreign neutrality. However, he reduced military size, federal jobs, removed excise taxes, and lowered national debt - all of which represented reduced federal influence. He only appointed Republicans.
+    \subsubsection{Louisiana Purchase}
+    \paragraph{Description}
+    The Louisiana Purchase entailed the U.S. purchase of the large, unchartered Louisiana Territory west of the Mississippi/Missouri. Critical to the territory was the Spain-controlled port of New Orleans. It represented a constitutional difficulty for Jefferson as no express parts of the Constitution authorized its purchase. It was chartered by the Lewis and Clark Expedition sent even before the Louisiana Purchase.
+    \paragraph{Causes}
+    Spanish officials in 1802 closed New Orleans to Americans, breaking the Pinckney Treaty of 1795 allowing unlimited tax-free use. This would have dramatic potential economic ramifications, so Jefferson sent ministers to negotiate its purpose.
+    \paragraph{Effects}
+    The Louisiana Purchase not only set a precedent for somewhat loose interpretation of the Constitution, but it also produced a large piece of agrarian land aligning with Republican ideals and revealing the Federalists as weak and small.
+    \subsubsection{John Marshall}
+    A Federalist judge who remained the chief of the Supreme Court for 34 years, Marshall made numerous critical decisions which generally affirmed the power of the central government over states. Jefferson and his successors attempted to impeach many of Marshall's Federalist judges but generally failed, revealing that partisan causes 
+    \subsection{\color{purple}{Economy}}
+    \subsection{\color{orange}{Social}}
+    \section {Era of Good Feelings (1816 - 1828)}
+    \section{Jacksonian Era (1828 - 1840)} 
+    
+    \end{document} 
