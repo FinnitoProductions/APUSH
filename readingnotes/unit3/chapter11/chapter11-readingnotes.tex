@@ -1,0 +1,75 @@
+\documentclass[a4paper]{article}
+    \usepackage[T1]{fontenc}
+    \usepackage{tcolorbox}
+    \usepackage{amsmath}
+    \tcbuselibrary{skins}
+    
+    \title{
+    \vspace{-3em}
+    \begin{tcolorbox}
+    \Huge\sffamily \begin{center} AP US History  \\
+    \LARGE Chapter 11 - Cotton, Slavery, and The Old South \\
+    \Large Finn Frankis \end{center} 
+    \end{tcolorbox}
+    \vspace{-3em}
+    }
+    \date{}
+    \author{}
+    
+    \usepackage{background}
+    \SetBgScale{1}
+    \SetBgAngle{0}
+    \SetBgColor{red}
+    \SetBgContents{\rule[0em]{4pt}{\textheight}}
+    \SetBgHshift{-2.3cm}
+    \SetBgVshift{0cm}
+    \usepackage[margin=2cm]{geometry} 
+    
+    \makeatletter
+    \def\cornell{\@ifnextchar[{\@with}{\@without}}
+    \def\@with[#1]#2#3{
+    \begin{tcolorbox}[enhanced,colback=gray,colframe=black,fonttitle=\large\bfseries\sffamily,sidebyside=true, nobeforeafter,before=\vfil,after=\vfil,colupper=blue,sidebyside align=top, lefthand width=.3\textwidth,
+    opacityframe=0,opacityback=.3,opacitybacktitle=1, opacitytext=1,
+    segmentation style={black!55,solid,opacity=0,line width=3pt},
+    title=#1
+    ]
+    \begin{tcolorbox}[colback=red!05,colframe=red!25,sidebyside align=top,
+    width=\textwidth,nobeforeafter]#2\end{tcolorbox}%
+    \tcblower
+    \sffamily
+    \begin{tcolorbox}[colback=blue!05,colframe=blue!10,width=\textwidth,nobeforeafter]
+    #3
+    \end{tcolorbox}
+    \end{tcolorbox}
+    }
+    \def\@without#1#2{
+    \begin{tcolorbox}[enhanced,colback=white!15,colframe=white,fonttitle=\bfseries,sidebyside=true, nobeforeafter,before=\vfil,after=\vfil,colupper=blue,sidebyside align=top, lefthand width=.3\textwidth,
+    opacityframe=0,opacityback=0,opacitybacktitle=0, opacitytext=1,
+    segmentation style={black!55,solid,opacity=0,line width=3pt}
+    ]
+    
+    \begin{tcolorbox}[colback=red!05,colframe=red!25,sidebyside align=top,
+    width=\textwidth,nobeforeafter]#1\end{tcolorbox}%
+    \tcblower
+    \sffamily
+    \begin{tcolorbox}[colback=blue!05,colframe=blue!10,width=\textwidth,nobeforeafter]
+    #2
+    \end{tcolorbox}
+    \end{tcolorbox}
+    }
+    \makeatother
+
+    \parindent=0pt
+    
+    \begin{document}
+    \maketitle
+    \SetBgContents{\rule[0em]{4pt}{\textheight}}
+    \cornell[Key Concepts]{What are this chapter's key concepts?}{\begin{itemize}
+        \item \textbf{4.1.II.D} - Communities emerged allowing enslaved/free Afr. Americans to protect cultural and social heritage w/ political goals to improve status
+        \item \textbf{4.1.III.B} - North saw successful abolitionist movements w/ growing free black populations, but govt. still restricted rights; only form of rebellion in South were failed uprisings
+        \item \textbf{4.2.III.B} - Southern cotton production paired w/ Northern manufacturing -> growth of U.S. commercial ties, both domestic and w/ other nations
+        \item \textbf{4.2.III.C} - Southerners relied on export of agriculture -> unique regional identity
+        \item \textbf{4.3.II.A} - Overcultivation in Southeast -> west of Appalachians saw more successful slave plantations
+        \item \textbf{4.3.II.B} - Majority of Southerners non-slave-owners, but most still argued that slavery was part of life
+    \end{itemize}}
+    \end{document}
