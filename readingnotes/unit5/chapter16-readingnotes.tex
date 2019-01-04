@@ -1,0 +1,76 @@
+\documentclass[a4paper]{article}
+    \usepackage[T1]{fontenc}
+    \usepackage{tcolorbox}
+    \usepackage{amsmath}
+    \tcbuselibrary{skins}
+    
+    \title{
+    \vspace{-3em}
+    \begin{tcolorbox}
+    \Huge\sffamily \begin{center} AP US History  \\
+    \LARGE Chapter 16 - The Conquest of the Far West \\
+    \Large Finn Frankis \end{center} 
+    \end{tcolorbox}
+    \vspace{-3em}
+    }
+    \date{}
+    \author{}
+    
+    \usepackage{background}
+    \SetBgScale{1}
+    \SetBgAngle{0}
+    \SetBgColor{red}
+    \SetBgContents{\rule[0em]{4pt}{\textheight}}
+    \SetBgHshift{-2.3cm}
+    \SetBgVshift{0cm}
+    \usepackage[margin=2cm]{geometry} 
+    
+    \makeatletter
+    \def\cornell{\@ifnextchar[{\@with}{\@without}}
+    \def\@with[#1]#2#3{
+    \begin{tcolorbox}[enhanced,colback=gray,colframe=black,fonttitle=\large\bfseries\sffamily,sidebyside=true, nobeforeafter,before=\vfil,after=\vfil,colupper=blue,sidebyside align=top, lefthand width=.3\textwidth,
+    opacityframe=0,opacityback=.3,opacitybacktitle=1, opacitytext=1,
+    segmentation style={black!55,solid,opacity=0,line width=3pt},
+    title=#1
+    ]
+    \begin{tcolorbox}[colback=red!05,colframe=red!25,sidebyside align=top,
+    width=\textwidth,nobeforeafter]#2\end{tcolorbox}%
+    \tcblower
+    \sffamily
+    \begin{tcolorbox}[colback=blue!05,colframe=blue!10,width=\textwidth,nobeforeafter]
+    #3
+    \end{tcolorbox}
+    \end{tcolorbox}
+    }
+    \def\@without#1#2{
+    \begin{tcolorbox}[enhanced,colback=white!15,colframe=white,fonttitle=\bfseries,sidebyside=true, nobeforeafter,before=\vfil,after=\vfil,colupper=blue,sidebyside align=top, lefthand width=.3\textwidth,
+    opacityframe=0,opacityback=0,opacitybacktitle=0, opacitytext=1,
+    segmentation style={black!55,solid,opacity=0,line width=3pt}
+    ]
+    
+    \begin{tcolorbox}[colback=red!05,colframe=red!25,sidebyside align=top,
+    width=\textwidth,nobeforeafter]#1\end{tcolorbox}%
+    \tcblower
+    \sffamily
+    \begin{tcolorbox}[colback=blue!05,colframe=blue!10,width=\textwidth,nobeforeafter]
+    #2
+    \end{tcolorbox}
+    \end{tcolorbox}
+    }
+    \makeatother
+
+    \parindent=0pt
+    
+    \begin{document}
+    \maketitle
+    \SetBgContents{\rule[0em]{4pt}{\textheight}}
+    \cornell[Key Concepts]{What are this chapter's key concepts?}{\begin{itemize}
+        \item \textbf{5.1.II.C} - U.S. government restricted culture/independence of Mexicans/natives by encroaching on territories
+        \item \textbf{6.1.I.A} - Government support of transportation $\to$ emergence of new markets post-Civil War
+        \item \textbf{6.1.III.A} - Mechanization $\to$ $\uparrow$ food production, $\downarrow$ prices
+        \item \textbf{6.2.II.A} - Transcontinental railroads, minerals, govt. policies $\to$ growth of new commercial regions
+        \item \textbf{6.2.II.B} - Migrants went to both rural/commercial west for new opportunities in railroad construction/farming/ranching/mining
+        \item \textbf{6.2.II.C} - $\uparrow$ migrant populations $\to$ $\downarrow$ bison population $\to$ growing competition for resources $\to$ conflict w/ natives/Mexicans
+        \item \textbf{6.2.II.D} - U.S. govt. continually broke treaties w/ natives $\to$ lost independence through confinement to reservations
+    \end{itemize}}
+    \end{document}
